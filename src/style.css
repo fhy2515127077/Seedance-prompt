@@ -1,0 +1,135 @@
+/* Seedance Prompt Studio global design system */
+
+:root {
+  color-scheme: light;
+  --bg-primary: oklch(0.965 0.012 96);
+  --bg-secondary: oklch(0.99 0.006 98);
+  --surface: oklch(0.988 0.008 98);
+  --surface-strong: oklch(0.965 0.014 100);
+  --surface-muted: oklch(0.925 0.02 105);
+  --surface-tint: oklch(0.91 0.045 116);
+  --border-subtle: oklch(0.82 0.018 100 / 0.5);
+  --border-strong: oklch(0.58 0.025 100 / 0.38);
+  --text-primary: oklch(0.19 0.012 96);
+  --text-secondary: oklch(0.39 0.018 96);
+  --text-muted: oklch(0.56 0.015 96);
+  --text-inverse: oklch(0.985 0.006 98);
+  --accent-primary: oklch(0.27 0.045 126);
+  --accent-hover: oklch(0.22 0.052 126);
+  --accent-soft: oklch(0.88 0.08 118);
+  --accent-warm: oklch(0.76 0.092 67);
+  --danger: oklch(0.52 0.16 32);
+  --focus-ring: oklch(0.66 0.12 118 / 0.42);
+  --shadow-sm: 0 8px 24px oklch(0.18 0.02 96 / 0.06);
+  --shadow-md: 0 18px 46px oklch(0.18 0.02 96 / 0.08);
+  --shadow-lg: 0 30px 72px oklch(0.18 0.02 96 / 0.1);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 30px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    linear-gradient(115deg, oklch(0.96 0.016 92), oklch(0.94 0.026 118) 44%, oklch(0.965 0.012 86)),
+    var(--bg-primary);
+  color: var(--text-primary);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 16%, oklch(0.89 0.09 112 / 0.46), transparent 31%),
+    radial-gradient(circle at 82% 20%, oklch(0.86 0.075 70 / 0.26), transparent 30%),
+    linear-gradient(180deg, oklch(0.99 0.006 98 / 0.72), oklch(0.94 0.018 102 / 0.28));
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+textarea:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+a {
+  color: inherit;
+}
+
+#app {
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--text-primary);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.58 0.025 100 / 0.42);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.48 0.03 100 / 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
