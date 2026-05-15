@@ -1,6 +1,10 @@
 # Seedance Prompt Studio
 
 <p align="center">
+  <img src="./public/readme-hero.png" alt="Seedance Prompt Studio 首页预览" />
+</p>
+
+<p align="center">
   <strong>一个面向 AI 视频与图片创作的提示词工作台</strong>
 </p>
 
