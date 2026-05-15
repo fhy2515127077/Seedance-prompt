@@ -151,7 +151,7 @@ Seedance2
 如果你想交流 AI 视频提示词、Seedance 工作流、项目二次开发或合作需求，可以扫码联系我。
 
 <p align="center">
-  <img src="./public/qrcode.png" alt="作者微信二维码" width="220" />
+  <img src="./public/wechat-qrcode.png" alt="作者微信二维码" width="220" />
 </p>
 
 ---
